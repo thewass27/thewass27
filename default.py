@@ -16,7 +16,7 @@ def menu():
     addDir('Kids','7',1,artpath+'kids.PNG',fanart)
     xbmc.executebuiltin('Container.SetViewMode(500)')
   
-def (url):
+def MKSports(url):
     channelurl='http://mobile.desistreams.tv/DesiStreams/index2.php?tag=get_all_channel'
     response=Get_url(channelurl)
     channels=json.loads(response)
@@ -105,7 +105,7 @@ except:pass
 print "Mode: "+str(mode);print "URL: "+str(url);print "Name: "+str(name);print "IconImage: "+str(iconimage)
 
 if mode==None or url==None or len(url)<1:menu()
-elif mode==1:(url)
+elif mode==1:MKSports(url)
 elif mode==100:Play(name,url)
 
 xbmcplugin.endOfDirectory(int(sys.argv[1]))
